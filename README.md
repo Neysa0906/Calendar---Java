@@ -1,2 +1,23 @@
-# Calendar---Java
-Console-based monthly calendar generator written in Java (9th grade mini project).
+# Text Calendar (Java Console App)
+
+This is a simple **console-based calendar generator** written in Java.  
+It was originally created as my **9th grade mini software project** and later cleaned up and uploaded to GitHub.
+
+## What the program does
+
+- Asks the user for:
+  - A **year** (e.g. `2025`)
+  - A **month name** (e.g. `January`)
+  - The **weekday of the 1st day** of that month (e.g. `Sunday`)
+- Calculates the **number of days in the month** (including leap year handling for February).
+- Prints a **nicely formatted text calendar** with days from **Sunday to Saturday**.
+
+## How it works (logic)
+
+- Uses a fixed list of month names and days in each month.
+- Checks for leap year using:
+  - Leap year if:
+    - `year % 400 == 0`, or  
+    - `year % 4 == 0` and `year % 100 != 0`
+- Maps weekday names (`Sunday`, `Monday`, etc.) to an index from `0` to `6`.
+- Fills a `6 x 7` 2D array with dates and prints it as a calendar grid.
